@@ -6,3 +6,4 @@ EXPOSE 8080
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
 CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
+
