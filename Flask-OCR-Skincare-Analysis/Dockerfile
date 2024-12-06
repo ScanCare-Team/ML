@@ -5,5 +5,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "--timeout", "120", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "--workers", "4", "--threads", "2", "--timeout", "120", "app:app"]
+
 
