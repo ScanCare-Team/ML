@@ -10,10 +10,10 @@
 **Method:**  
 `POST {{base_url}}/ocr`
 
-**Description:**
-`Uploads an image and extracts text using OCR for further processing`
+#### Description
+Uploads an image and extracts text using OCR for further processing
 
-**Request Parameters**
+#### Request Parameters
 | Parameter       | Type    | Description                 |
 |-----------------|---------|-----------------------------|
 | file            | Binary  | Image file to process (e.g., JPEG, PNG).                |
