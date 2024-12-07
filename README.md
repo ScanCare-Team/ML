@@ -10,7 +10,7 @@
 **Method:**  
 `POST {{base_url}}/ocr`
 
-#### Description
+#### Description:
 Uploads an image and extracts text using OCR for further processing
 
 #### Request Parameters
@@ -45,7 +45,7 @@ Uploads an image and extracts text using OCR for further processing
 **Method:**
 `POST {{base_url}}/predict`
 **Description:**
-`Processes input text to detect hazardous materials and predict skin compatibility.`
+Processes input text to detect hazardous materials and predict skin compatibility.
 
 
 
