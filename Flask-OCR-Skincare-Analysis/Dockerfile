@@ -1,12 +1,7 @@
 FROM python:3.9-slim
-WORKDIR /app
-COPY . /app
-RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 5000
-ENV FLASK_APP=app.py
-ENV FLASK_ENV=production
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "--workers", "2", "--threads", "2", "--timeout", "300", "app:app"]
-
-
-
-
+ENV PYTHONUNBUFFERED True
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
+RUN pip install -r requirements.txt
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "1", "--threads", "8", "--timeout", "0", "app:app"]
