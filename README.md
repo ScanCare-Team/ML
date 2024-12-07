@@ -44,9 +44,50 @@ Uploads an image and extracts text using OCR for further processing
 ## 2. Predict Skin Type and Check Hazardous Materials
 **Method:**
 `POST {{base_url}}/predict`
-**Description:**
+#### Description:
 Processes input text to detect hazardous materials and predict skin compatibility.
+#### Request Parameters:
+| Parameter       | Type    | Description                 |
+|-----------------|---------|-----------------------------|
+| text            | String  | Ingredient list or text to analyze (required)                |
 
+### Success Response:
+- **Hazardous Materials Detected:**
+```` json
+{
+  "hazardous_materials": [
+    {
+      "Bahan Berbahaya": "Example Material",
+      "Analisis": "Details about the hazardous material"
+    }
+  ]
+}
+````
+
+- **Skin Type Prediction:**
+```` json
+{
+  "predicted_skin_types": [
+    "combination",
+    "dry",
+    "normal",
+    "oily"
+   ]
+}
+````
+#### Error Response:
+- 400 Bad Request:
+```` json
+{
+  "error": "Text input is required"
+}
+````
+- 500 Internal Server Error:
+```` json
+{
+  "error": "Detailed error message"
+}
+````
 
 
 
