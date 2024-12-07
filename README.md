@@ -9,7 +9,11 @@
 ## 1. OCR for Ingredient Extraction
 **Method:**  
 `POST {{base_url}}/ocr`
-**Uploads an image and extracts text using OCR for further processing**
+
+**Description:**
+`Uploads an image and extracts text using OCR for further processing`
+
+**Request Parameters**
 | Parameter       | Type    | Description                 |
 |-----------------|---------|-----------------------------|
 | file            | Binary  | Image file to process (e.g., JPEG, PNG).                |
@@ -37,6 +41,11 @@
 }
 ````
 ---
+## 2. Predict Skin Type and Check Hazardous Materials
+**Method:**
+`POST {{base_url}}/predict`
+**Description:**
+`Processes input text to detect hazardous materials and predict skin compatibility.`
 
 
 
